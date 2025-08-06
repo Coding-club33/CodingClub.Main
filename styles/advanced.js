@@ -20,6 +20,7 @@ carouselChildrens.slice(0, cardPreView).forEach(card =>{
 });
 
 
+
 //Add event listner for the arrow buttons to scroll the carousel left and right
 arrowBtns.forEach(btn => {
   btn.addEventListener("click", () => {
