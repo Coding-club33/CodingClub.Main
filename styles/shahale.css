@@ -344,6 +344,7 @@ footer{
   cursor: pointer;
 }
 .footer-add{
+  text-transform: capitalize;
   display: flex;
   flex: 1;
   justify-content: center;
@@ -353,6 +354,9 @@ footer{
   font-family: inter;
   font-weight: bold;
   
+}
+.footer-add p {
+  text-align: center;
 }
 .special-char{
   color: #CE1212;
