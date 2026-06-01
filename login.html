@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -23,7 +23,7 @@
           arrow_back
         </span></button></a>
 
-    <img class="loginlogo" src="img/loginlogored.jpg">
+    <img class="loginlogo" src="img/loginlogored.jpg" alt="Coding Club Logo">
     <h1>Login</h1>
     <p id="error-message"></p>
     <form id="form">
@@ -47,6 +47,42 @@
     <!-- <p>New here? <a href="signup.html">Create an Account</a></p> -->
   </div>
 
+
+  <script>
+    const form = document.getElementById('form');
+    const emailInput = document.getElementById('email-input');
+    const passwordInput = document.getElementById('password-input');
+    const errorMessage = document.getElementById('error-message');
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const emailDiv = emailInput.parentElement;
+      const passwordDiv = passwordInput.parentElement;
+
+      // Reset state
+      emailDiv.classList.remove('incorrect');
+      passwordDiv.classList.remove('incorrect');
+      errorMessage.textContent = '';
+
+      const email = emailInput.value.trim();
+      const password = passwordInput.value;
+
+      if (!email) {
+        emailDiv.classList.add('incorrect');
+        errorMessage.textContent = 'Please enter your email.';
+        return;
+      }
+      if (!password) {
+        passwordDiv.classList.add('incorrect');
+        errorMessage.textContent = 'Please enter your password.';
+        return;
+      }
+
+      // TODO: Replace with actual authentication logic
+      errorMessage.style.color = '#f06272';
+      errorMessage.textContent = 'Login coming soon. Stay tuned!';
+    });
+  </script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XP0STPVBLX"></script>
